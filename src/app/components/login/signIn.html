@@ -5,13 +5,23 @@
 
     <div class="form-group">
       <label for="txtEmail">Email address</label>
-      <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+      <input type="email"
+             class="form-control"
+             id="txtEmail"
+             placeholder="Enter email"
+             name="email"
+             ng-model="user.email"/>
     </div>
     <div class="form-group">
       <label for="txtPass">Password</label>
-      <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
+      <input type="password"
+             class="form-control"
+             id="txtPass"
+             placeholder="Password"
+             name="password"
+             ng-model="user.password"/>
     </div>
-    <button type="submit" class="btn btn-default btn-block">Login</button>
+    <button type="submit" class="btn btn-default btn-block" ng-click="loginUser(user)">Login</button>
     <br />
     <br />
     <h4>Login with</h4>
@@ -34,37 +44,27 @@
 
     <div class="form-group">
       <label for="txtRegEmail">Email address</label>
-      <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+      <input type="email"
+             class="form-control"
+             id="txtEmail"
+             placeholder="Enter email"
+             name="email"
+             ng-model="user.email" />
     </div>
     <div class="form-group">
       <label for="txtRegPass">Password</label>
-      <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
+      <input type="password"
+             class="form-control"
+             id="txtPass"
+             placeholder="Password"
+             name="password"
+             ng-model="user.password"/>
     </div>
-    <button type="submit" class="btn btn-default">Register</button>
+    <button type="submit" class="btn btn-default" ng-click="loginUser(user)">Register</button>
   </form>
   <!-- / REGISTER -->
-  <!-- PROFILE -->
-  <form id="frmProfile" role="form">
-    <h2>Profile</h2>
 
-    <br />
-    <div class="form-group">
-      <label for="txtName">Name</label>
-      <input type="text" class="form-control" id="txtName" placeholder="Name" name="name" />
-    </div>
-    <div class="form-group">
-      <label for="ddlDino">Favorite Dinosaur</label>
-      <select id="ddlDino" name="favoriteDinosaur" class="form-control">
-        <option>None</option>
-        <option>Pteranodon</option>
-        <option>Lambeosaurus</option>
-        <option>Stegosaurus</option>
-        <option>Daspletosaurus</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Update</button>
-  </form>
-  <!-- / PROFILE -->
+
   <hr />
   <!-- ALERT BOX -->
   <div id="alert" class="alert" role="alert">

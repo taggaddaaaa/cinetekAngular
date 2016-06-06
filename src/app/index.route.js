@@ -10,9 +10,9 @@
 
         .when('/main', {
             templateUrl: 'app/main/main.html',
-            controller: 'MainCtrl'
+            controller: 'mainController'
         })
-        .when('/details/:id',{
+        .when('/details/:name',{
             templateUrl: 'app/components/details/details.html',
             controller: 'detailsController'
         })

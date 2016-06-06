@@ -11,7 +11,7 @@
 
 <ul class="list-unstyled">
   <li ng-repeat="movie in movies | filter:globalSearch:name"> {{ movie.name }}
-    <a ng-href="#/details/{{ movie.name }}">Détails</a>
+    <button ng-click="goToMovie(movie)">Détails</button>
     <a ng-href="#/edit/{{ movie.name }}">edit</a>
   </li>
 </ul>
