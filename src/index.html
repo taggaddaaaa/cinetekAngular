@@ -11,30 +11,108 @@
     <!-- bower:css -->
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
     <!-- endbower -->
+
+    <!-- Tile icon for Win8 -->
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="msapplication-navbutton-color" content="#303F9F">
+
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" />
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <!-- endbuild -->
 
     <!-- build:css({.tmp/serve,src}) styles/app.css -->
     <!-- inject:css -->
     <!-- css files will be automatically insert here -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,
+    bolditalic,black,medium&amp;lang=en">
     <!-- endinject -->
     <!-- endbuild -->
   </head>
   <body>
     <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <!-- Header section containing logo -->
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><i class="material-icons">tv</i>CINETEK</span>
+
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="#">Login</a>
+            <a class="mdl-navigation__link" href="#">Logout</a>
+            <a class="mdl-navigation__link" href="#">SignUp</a>
+            <a class="mdl-navigation__link" href="#">Mon profil</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"><i class="material-icons">tv</i>CINETEK</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#">Login</a>
+          <a class="mdl-navigation__link" href="#">Logout</a>
+          <a class="mdl-navigation__link" href="#">SignUp</a>
+          <a class="mdl-navigation__link" href="#">Mon profil</a>
+        </nav>
+      </div>
+
+
+      <main class="mdl-layout__content">
+        <div class="page-content">
+
+          <div ng-view></div>
+
+          <div class="footer">
+            <div class="container">
+              <p>2016 <span class="glyphicon glyphicon-heart"></span> Taggaddaaaa</p>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36008660-6', 'auto');
+      ga('send', 'pageview');
+    </script>
+
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
     <!-- endbower -->
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
     <!-- endbuild -->
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automatically insert here -->
+    <script src="app/components/create/createController.js"></script>
+    <script src="app/components/details/detailsController.js"></script>
+    <script src="app/components/edit/editController.js"></script>
+    <script src="app/components/firebase/bdd.js"></script>
+    <script src="app/components/login/signInController.js"></script>
+    <script src="app/main/mainController.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->

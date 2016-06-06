@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "angularfire": "^1.2.0",
-    "firebase": "^2.4.2"
+    "firebase": "2.4.2"
   },
   "scripts": {
     "test": "gulp test"

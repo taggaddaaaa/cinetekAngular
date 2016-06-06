@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h2 style="text-align: center">Detail du film : {{movie.name}}</h2>
+  <p style="text-align: center">
+    <a class="btn btn-lg btn-warning" ng-href="/#/">Retour à la liste</a> </p>
+</div>
+
+<div>
+  <img class="img-responsive" ng-src="{{movie.affiche.url}}" alt="affiche non reconnue">
+  <ul class="list-unstyled">
+    <li>Sorti en {{movie.releaseDate}}</li>
+    <li>Réalisé par {{movie.realisator}}</li>
+    <li>Avec <span ng-repeat="actor in movie.actors track by $index">{{actor}}</span></li>
+    <li>Score : {{ratingPossible[movie.rating]}}</li>
+    <li><button ng-click="delete(movie)">del</button></li>
+  </ul>
+</div>

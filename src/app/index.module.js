@@ -2,6 +2,7 @@
   'use strict';
 
   angular
-    .module('cinetekAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'toastr']);
+    .module('cinetekAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource',
+      'ngRoute', 'toastr', 'firebase']);
 
 })();

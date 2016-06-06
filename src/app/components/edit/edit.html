@@ -1,0 +1,93 @@
+<div class="jumbotron">
+  <h2 style="text-align: center">Edition de {{movie.name}}</h2>
+
+  <form style="text-align: center" novalidate name="editForm" ng-submit="save(movie)" >
+
+    <div class="form-group" ng-class="{ 'has-error': editForm.titre.$invalid }">
+      <label>
+        Titre
+        <input type="text"
+               required
+               ng-model="movie.name"
+               name="titre"
+               class="form-control"
+               placeholder={{movie.name}}
+        >
+      </label>
+    </div>
+
+    <div class="form-group"
+         ng-class="{ 'has-error': editForm.poster.$invalid }"
+    >
+      <label>
+        Affiche
+        <input type="text"
+               required
+               ng-model="movie.affiche.url"
+               name="affiche"
+               class="form-control"
+               placeholder={{movie.affiche.url}}
+        >
+      </label>
+    </div>
+
+    <div class="form-group"
+         ng-class="{ 'has-error': editForm.realisateur.$invalid }"
+    >
+      <label>
+        Réalisateur
+        <input type="text"
+               required
+               ng-model="movie.realisator"
+               name="realisateur"
+               class="form-control"
+               placeholder={{movie.realisator}}
+        >
+      </label>
+    </div>
+
+    <div class="form-group"
+         ng-class="{ 'has-error': editForm.date.$invalid }"
+    >
+      <label>
+        Date de sortie
+        <input type="text"
+               required
+               ng-model="movie.releaseDate"
+               name="date"
+               class="form-control"
+               placeholder={{movie.releaseDate}}
+        >
+      </label>
+    </div>
+
+    <div class="form-group"
+         ng-class="{ 'has-error': editForm.note.$invalid }"
+    >
+      <label>
+        Note
+        <input type="text"
+               name="note"
+               required
+               ng-model="movie.rating"
+               class="form-control"
+               placeholder={{movie.rating}}
+        >
+      </label>
+    </div>
+
+
+    <p>
+      <button ng-disabled="editForm.$invalid"
+              class="btn btn-lg btn-success"
+              ng-click="save(movie)"
+      >
+        sauvegarder
+      </button>
+      <button class="btn btn-lg btn-danger"  ng-click="delete(movie)" ng-href="/#/">Effacer le film</button>
+      <a class="btn btn-lg btn-warning" ng-href="/#/">Retour à la liste</a>
+    </p>
+
+  </form>
+
+</div>
