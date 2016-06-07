@@ -24,18 +24,19 @@
             }
 
         })
+      
         .controller('mainController', mainController);
 
-    function mainController($scope, $location, Bdd, detailMovie) {
-
-        $scope.goToMovie = function (movie) {
-            detailMovie.set(movie.$id, movie.name);
-            $location.path('details/' + movie.name + '/')
-        };
-
-        Bdd.$loaded().then(function (data) {
-            $scope.movies = data;
-        });
-    }
+        function mainController($scope, $location, Bdd, detailMovie) {
+    
+            $scope.goToMovie = function (movie) {
+                detailMovie.set(movie.$id, movie.name);
+                $location.path('details/' + movie.name + '/')
+            };
+    
+            Bdd.$loaded().then(function (data) {
+                $scope.movies = data;
+            });
+        }
 
 })();

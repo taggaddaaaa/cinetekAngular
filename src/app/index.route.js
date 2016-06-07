@@ -16,7 +16,7 @@
             templateUrl: 'app/components/details/details.html',
             controller: 'detailsController'
         })
-        .when('/edit/:id', {
+        .when('/edit/:name', {
             templateUrl: 'app/components/edit/edit.html',
             controller: 'editController'
         })
