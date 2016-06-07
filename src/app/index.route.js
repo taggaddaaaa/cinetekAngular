@@ -23,6 +23,9 @@
         .when('/create', {
             templateUrl: 'app/components/create/create.html',
             controller: 'createController'
+        }).when('/login', {
+            templateUrl: 'app/components/login/signin.html',
+            controller: 'signinController'
         })
         .otherwise({
             redirectTo: '/main'

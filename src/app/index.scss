@@ -27,6 +27,44 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   }
 }
 
+//PERSO
+
+.nav-logo {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.footer{
+  border-width:2px;
+  border-top-style:ridge;
+  text-align: center;
+}
+
+.footer p{
+  margin: 20px;
+}
+
+.jumlead{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.list{
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.list li{
+  padding: 5px;
+}
+
+.create{
+  margin:10%;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

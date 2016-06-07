@@ -1,6 +1,7 @@
 <div class="jumbotron">
   <h2 style="text-align: center">Liste de tous mes films</h2>
-  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis corporis dolore
+
+  <p class="lead jumlead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis corporis dolore
     ex hic ipsum nostrum recusandae rem sed voluptatibus. Accusamus beatae explicabo molestiae, odit quae qui rerum
     saepe totam.
   </p>
@@ -9,9 +10,11 @@
   </p>
 </div>
 
-<ul class="list-unstyled">
-  <li ng-repeat="movie in movies | filter:globalSearch:name"> {{ movie.name }}
-    <button ng-click="goToMovie(movie)">Détails</button>
-    <a ng-href="#/edit/{{ movie.name }}">edit</a>
-  </li>
-</ul>
+<div class="list">
+  <ul class="list-unstyled">
+    <li ng-repeat="movie in movies | filter:globalSearch:name"> {{ movie.name }}
+      <button class="btn btn-info" ng-click="goToMovie(movie)">Détails</button>
+      <a class="btn btn-default" ng-href="#/edit/{{ movie.name }}">edit</a>
+    </li>
+  </ul>
+</div>
