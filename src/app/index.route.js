@@ -8,8 +8,8 @@
   function routeConfig($routeProvider) {
     $routeProvider
 
-        .when('/main', {
-            templateUrl: 'app/main/main.html',
+        .when('/', {
+            templateUrl: 'app/components/main/main.html',
             controller: 'mainController'
         })
         .when('/details/:name',{
@@ -28,7 +28,7 @@
             controller: 'signinController'
         })
         .otherwise({
-            redirectTo: '/main'
+            redirectTo: '/'
         });
   }
 

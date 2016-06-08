@@ -3,10 +3,28 @@
   
   angular
     .module('cinetekAngular')
-    .controller('signInCtrl', ['$rootScope', '$location', function (Bdd, $rootScope, $location) {
+    .controller('signInCtrl', ['$rootScope', '$location', function ($scope, $location, user) {
       
-  }]);
+      if (user.isConnected()) {
+        $location.path('/')
+      }
+
+      var initUser = {
+        email : '',
+        password : ''
+      };
+
+      $scope.user = angular.copy(initUser);
+
+      $scope.reset = function () {
+        $scope.user = angular.copy(initUser);
+      };
 
 
+      $scope.connect = function (email, password) {
+        user.connect(email, password);
+      };
+
+    }]);
 
 })();

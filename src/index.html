@@ -67,28 +67,11 @@
 
           <div ng-view></div>
 
-          <div class="footer">
-            <div class="container">
-              <p>2016 <span class="glyphicon glyphicon-heart"></span> Taggaddaaaa</p>
-            </div>
-          </div>
+          <footer></footer>
 
         </div>
       </main>
     </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-36008660-6', 'auto');
-      ga('send', 'pageview');
-    </script>
-
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -108,9 +91,12 @@
     <script src="app/components/create/createController.js"></script>
     <script src="app/components/details/detailsController.js"></script>
     <script src="app/components/edit/editController.js"></script>
-    <script src="app/components/firebase/bdd.js"></script>
+    <script src="app/components/firebase/Movies.js"></script>
     <script src="app/components/login/signInController.js"></script>
-    <script src="app/main/mainController.js"></script>
+    <script src="app/components/main/mainController.js"></script>
+    <script src="app/components/login/auth.js"></script>
+    <script src="app/components/firebase/user.js"></script>
+    <script src="app/components/footer/footer.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->

@@ -1,6 +1,6 @@
 <div id="container" class="container">
   <!-- LOGIN -->
-  <form id="frmLogin" role="form">
+  <form id="frmLogin" role="form" ng-submit="connect(user.email, user.password)" name="loginForm">
     <h2>Login</h2>
 
     <div class="form-group">
@@ -10,6 +10,7 @@
              id="txtEmail"
              placeholder="Enter email"
              name="email"
+             required
              ng-model="user.email"/>
     </div>
     <div class="form-group">
@@ -17,11 +18,13 @@
       <input type="password"
              class="form-control"
              id="txtPass"
+             required
              placeholder="Password"
              name="password"
              ng-model="user.password"/>
     </div>
-    <button type="submit" class="btn btn-default btn-block" ng-click="loginUser(user)">Login</button>
+    <button type="submit" class="btn btn-default btn-block">Login</button>
+    <button class="btn btn-default btn-block" ng-click="reset()">Reset</button>
     <br />
     <br />
     <h4>Login with</h4>
@@ -32,13 +35,13 @@
 
   </form>
   <!-- / LOGIN -->
-  <!-- LOGOUT -->
+  <!-- LOGOUT 
   <form id="frmLogout" role="form">
     <h2>You are logged out!</h2>
 
   </form>
   <!-- / LOGOUT -->
-  <!-- REGISTER -->
+  <!-- REGISTER
   <form id="frmRegister" role="form">
     <h2>Register</h2>
 
@@ -66,7 +69,7 @@
 
 
   <hr />
-  <!-- ALERT BOX -->
+  <!-- ALERT BOX
   <div id="alert" class="alert" role="alert">
     <h4 id="alert-title">You are not logged in</h4>
 
