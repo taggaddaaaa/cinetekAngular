@@ -7,12 +7,11 @@
     .constant('FIREBASE_URL', 'https://cinetek.firebaseio.com/')
     .constant('NOTE_SELECT',
       [
-          {label: 'nul', value: 0},
-          {label: 'mauvais', value: 1},
-          {label: 'moyen', value: 2},
-          {label: 'bon', value: 3},
-          {label: 'excellent', value: 4}
-
+        {id:1, name: 'mauvais'},
+        {id:2, name: 'bof'},
+        {id:3, name: 'moyen'},
+        {id:4, name: 'pas mal'},
+        {id:5, name: 'super'}
       ]
     );
 
