@@ -1,5 +1,5 @@
 'use strict';
-  
+
 angular.module('cinetekAngular')
   .directive('list', function () {
     return {
@@ -7,9 +7,10 @@ angular.module('cinetekAngular')
       restrict: 'E',
       controller:
         function($scope, Movies, $location) {
-          // ===================================
+
+          //////////////////////////////////////
           // ========= Function remove =========
-          // ===================================
+          //////////////////////////////////////
           $scope.delete = function(movie) {
             Movies.deleteMovie(movie)
               .then(function () {
@@ -21,9 +22,9 @@ angular.module('cinetekAngular')
                 $scope.movieError = true;
               });
           };
-          // =====================================
+          ////////////////////////////////////////
           // ========= Function redirect =========
-          // =====================================
+          ////////////////////////////////////////
           $scope.redirect = function (path) {
             $location.path(path);
           }
