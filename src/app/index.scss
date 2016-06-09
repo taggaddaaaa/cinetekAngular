@@ -29,6 +29,10 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 
 //PERSO
 
+.center {
+  text-align: center;
+}
+
 .nav-logo {
   text-decoration: none;
   color: #FFFFFF;
@@ -38,6 +42,7 @@ h2{
 }
 
 .footer{
+  margin-top: 20px;
   border-width:2px;
   border-top-style:ridge;
   text-align: center;

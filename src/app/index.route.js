@@ -3,33 +3,57 @@
 
   angular
     .module('cinetekAngular')
+    .run(["$rootScope", "$location", function($rootScope, $location) {
+      $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+        // We can catch the error thrown when the $requireAuth promise is rejected
+        // and redirect the user back to the home page
+        if (error === "AUTH_REQUIRED") {
+          $location.path("/login");
+        }
+      });
+    }]);
+
+  angular
+    .module('cinetekAngular')
     .config(routeConfig);
 
-  function routeConfig($routeProvider) {
-    $routeProvider
+    function routeConfig($routeProvider) {
+      $routeProvider
 
-        .when('/', {
-            templateUrl: 'app/components/main/main.html',
-            controller: 'mainController'
-        })
-        .when('/details/:name',{
-            templateUrl: 'app/components/details/details.html',
-            controller: 'detailsController'
-        })
-        .when('/edit/:name', {
-            templateUrl: 'app/components/edit/edit.html',
-            controller: 'editController'
-        })
-        .when('/create', {
-            templateUrl: 'app/components/create/create.html',
-            controller: 'createController'
-        }).when('/login', {
-            templateUrl: 'app/components/login/signin.html',
-            controller: 'signinController'
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
+          .when('/list', {
+              templateUrl: 'app/list/list.html',
+              controller: 'ListController',
+              resolve: {
+                "currentAuth": ["authService", function(Auth) {
+                  return Auth.$requireAuth();
+                }]
+              }
+          })
+          .when('/create', {
+              templateUrl: 'app/create/create.html',
+              controller: 'CreateController',
+              resolve: {
+                "currentAuth": ["authService", function(Auth) {
+                  return Auth.$requireAuth();
+                }]
+              }
+          })
+          .when('/update/:id', {
+            templateUrl: 'app/update/update.html',
+            controller: 'UpdateController',
+            resolve: {
+              "currentAuth": ["authService", function(Auth) {
+                return Auth.$requireAuth();
+              }]
+            }
+          })
+          .when('/login', {
+              templateUrl: 'app/login/login.html',
+              controller: 'LoginController'
+          })
+          .otherwise({
+              redirectTo: '/list'
+          });
   }
 
 })();

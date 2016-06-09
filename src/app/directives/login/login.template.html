@@ -1,0 +1,89 @@
+<div id="container" class="container">
+
+  <div class="alert alert-danger" ng-if="logError">
+    <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Erreur connexion</strong>
+  </div>
+
+
+  <!-- LOGIN -->
+  <form role="form" ng-submit="connect(user.email, user.password)" name="loginForm">
+    <h2>Login</h2>
+
+    <div class="form-group">
+      <label for="txtEmail">Email address</label>
+      <input type="email"
+             class="form-control"
+             id="txtEmail"
+             placeholder="Enter email"
+             name="email"
+             required
+             ng-model="user.email"/>
+    </div>
+    <div class="form-group">
+      <label for="txtPass">Password</label>
+      <input type="password"
+             class="form-control"
+             id="txtPass"
+             required
+             placeholder="Password"
+             name="password"
+             ng-model="user.password"/>
+    </div>
+    <button type="submit" class="btn btn-default btn-block">Login</button><!--
+    <button class="btn btn-default btn-block" ng-click="reset()">Reset</button>-->
+    <br />
+    <br />
+    <div class="center">
+      <h4 class="center">Login with</h4>
+      <a href="#" class="btn btn-primary bt-social" data-provider="facebook">Facebook</a>
+      <a href="#" class="btn btn-info bt-social" data-provider="twitter">Twitter</a>
+      <a href="#" class="btn btn-default bt-social" data-provider="github">GitHub</a>
+      <a href="#" class="btn btn-warning bt-social" data-provider="linkedin">Linkedin</a>
+    </div>
+  </form>
+
+
+
+  <!-- / LOGIN -->
+  <!-- LOGOUT
+  <form id="frmLogout" role="form">
+    <h2>You are logged out!</h2>
+
+  </form>
+  <!-- / LOGOUT -->
+  <!-- REGISTER
+  <form id="frmRegister" role="form">
+    <h2>Register</h2>
+
+    <div class="form-group">
+      <label for="txtRegEmail">Email address</label>
+      <input type="email"
+             class="form-control"
+             id="txtEmail"
+             placeholder="Enter email"
+             name="email"
+             ng-model="user.email" />
+    </div>
+    <div class="form-group">
+      <label for="txtRegPass">Password</label>
+      <input type="password"
+             class="form-control"
+             id="txtPass"
+             placeholder="Password"
+             name="password"
+             ng-model="user.password"/>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="loginUser(user)">Register</button>
+  </form>
+  <!-- / REGISTER -->
+
+
+  <!-- ALERT BOX
+  <div id="alert" class="alert" role="alert">
+    <h4 id="alert-title">You are not logged in</h4>
+
+    <p id="alert-detail"></p>
+  </div>
+  <!-- / ALERT BOX -->
+</div>
