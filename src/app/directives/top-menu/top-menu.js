@@ -6,7 +6,7 @@
     .directive('topMenu', topMenu);
   function topMenu() {
       return {
-        templateUrl: 'app/main/top-menu.html',
+        templateUrl: 'app/directives/top-menu/top-menu.html',
         restrict: 'E',
         controller : function ($scope, user) {
 

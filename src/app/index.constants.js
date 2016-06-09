@@ -3,10 +3,9 @@
 
   angular
     .module('cinetekAngular')
-    .constant('malarkey', malarkey)
     .constant('moment', moment)
     .constant('FIREBASE_URL', 'https://cinetek.firebaseio.com/')
-    .constant('RATING',
+    .constant('NOTE_SELECT',
       [
           {label: 'nul', value: 0},
           {label: 'mauvais', value: 1},

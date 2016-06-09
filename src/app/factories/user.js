@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularFireApp')
+angular.module('cinetekAngular')
   .factory('user', function ($location, authService, ConnectedUser) {
 
     var user = null;
