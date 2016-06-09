@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "dependencies": {
     "angularfire": "^1.2.0",
-    "firebase": "2.4.2"
+    "express-session": "^1.11.3",
+    "firebase": "2.4.2",
+    "passport": "^0.3.0",
+    "passport-github2": "^0.1.9",
+    "passport-linkedin": "^1.0.0",
+    "passport-twitter": "^1.0.3"
   },
   "scripts": {
     "test": "gulp test"
