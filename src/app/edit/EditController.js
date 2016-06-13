@@ -1,26 +1,10 @@
-// 'use strict';
-//
-// angular.module('cinetekAngular')
-//   .controller('UpdateController', function ($scope, Movies, $routeParams, NOTE_SELECT) {
-//     $scope.updatedSuccess = false;
-//     $scope.updatedError = false;
-//
-//     var id = $routeParams.id;
-//     Movies.getMovie(id)
-//       .then(function (data) {
-//         $scope.movie = data;
-//         $scope.select = NOTE_SELECT;
-//         $scope.movie.rate = NOTE_SELECT[$scope.movie.rate.id-1];
-//       })
-//       .catch(function () {
-//
-//       });
-//   });
-
-
 'use strict';
 angular.module('cinetekAngular')
-  .controller('EditController', function ($scope, Movies, $location) {
+  .controller('EditController', function ($scope, $routeParams, Movies) {
+    $scope.movie = Movies.getMovieById();
+    $scope.movieSuccess = false;
+    $scope.movieError = false;
+
     // ===================================
     // ========= Function update =========
     // ===================================
@@ -44,7 +28,9 @@ angular.module('cinetekAngular')
     // =====================================
     $scope.redirect = function (path) {
       $location.path(path);
-    }
+    };
 
+    
+    console.log('movie', movie);
   });
 

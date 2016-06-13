@@ -6,8 +6,7 @@ angular.module('cinetekAngular')
     function getMovies() {
       return list;
     }
-
-
+    
 
     // =====================================
     // ====== Function deleteMovie =========
