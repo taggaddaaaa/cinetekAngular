@@ -8,7 +8,7 @@ test@test.fr
 test
 
 ### Installation
-Simply run `npm install` in the root directory and wait for all the dependencies to install. 
+Simply run `npm install` et `bower install` in the root directory and wait for all the dependencies to install. 
 Then run `gulp serve` to start the server. 
 By default the page will be served on <a href="http://localhost:3000">http://localhost:3000</a>.
 
