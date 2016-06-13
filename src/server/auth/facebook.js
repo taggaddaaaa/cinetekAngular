@@ -29,7 +29,7 @@ function toggleSignIn() {
  *
  * This method also registers a listener with firebase.auth().onAuthStateChanged.
  * This listener is called when the user is signed in or out, and that
- * is where we update the UI.
+ * is where we edit the UI.
  *
  * When signed in, we also authenticate to the Firebase Realtime Database.
  */

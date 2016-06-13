@@ -38,9 +38,18 @@
                 }]
               }
           })
-          .when('/update/:id', {
-            templateUrl: 'app/update/update.html',
-            controller: 'UpdateController',
+          .when('/edit/:id', {
+            templateUrl: 'app/edit/edit.html',
+            controller: 'EditController',
+            resolve: {
+              "currentAuth": ["authService", function(Auth) {
+                return Auth.$requireAuth();
+              }]
+            }
+          })
+          .when('/details/:id', {
+            templateUrl: 'app/details/details.html',
+            controller: 'DetailsController',
             resolve: {
               "currentAuth": ["authService", function(Auth) {
                 return Auth.$requireAuth();

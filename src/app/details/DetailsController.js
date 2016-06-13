@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cinetekAngular')
-  .controller('CreateController', function ($scope, NOTE_SELECT) {
+  .controller('DetailsController', function ($scope, NOTE_SELECT, Movies) {
     $scope.movieSuccess = false;
     $scope.movieError = false;
     $scope.movie = {};

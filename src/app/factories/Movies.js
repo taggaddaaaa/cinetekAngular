@@ -7,6 +7,11 @@ angular.module('cinetekAngular')
       return list;
     }
 
+
+
+    // =====================================
+    // ====== Function deleteMovie =========
+    // =====================================
     function deleteMovie (movie) {
       return list.$remove(movie)
         .then(function (movie) {
@@ -15,6 +20,9 @@ angular.module('cinetekAngular')
         });
     }
 
+    // =====================================
+    // ========= Function addMovie =========
+    // =====================================
     function addMovie(movie) {
       return list.$add(
         {
@@ -22,7 +30,8 @@ angular.module('cinetekAngular')
           director: movie.director,
           actors: movie.actors,
           poster: movie.poster,
-          rate: movie.rate
+          rate: movie.rate,
+          synopsis: movie.synopsis
         }
         )
         .then(function (movie) {
@@ -31,6 +40,9 @@ angular.module('cinetekAngular')
         });
     }
 
+    // =====================================
+    // ====== Function updateMovie =========
+    // =====================================
     function updateMovie (id) {
       return list.$save(id)
         .then(function (movie) {
@@ -39,6 +51,10 @@ angular.module('cinetekAngular')
         })
     }
 
+
+    // =====================================
+    // ====== Function getMovie ============
+    // =====================================
     function getMovie(id) {
       return list.$loaded()
         .then(function(data) {

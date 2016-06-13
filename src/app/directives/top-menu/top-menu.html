@@ -1,37 +1,74 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="demo-layout mdl-layout__header mdl-layout__header--transparent">
 
-  <header class="mdl-layout__header">
   <div class="mdl-layout__header-row">
-    <a href="/list" class="mdl-layout-title nav-logo"><i class="material-icons">tv</i>  CINETEK</a>
+    <!-- Titre -->
+    <span class="mdl-layout-title"><i class="material-icons">tv</i>  CINETEK</span>
+
+    <!-- Add spacer, to align navigation to the right -->
+    <div  class="mdl-layout-spacer"></div>
+
+    <span ng-if="isConnected()">Bienvenue {{user.email}}</span>
+
+    <div  class="mdl-layout-spacer"></div>
+
+    <!-- Barre de recherche -->
+    <div ng-if="isConnected()" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+      <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+        <i class="material-icons">search</i>
+      </label>
+      <div class="mdl-textfield__expandable-holder">
+        <input ng-model='filterByTitle' class="mdl-textfield__input" type="text" id="search">
+      </div>
+    </div>
 
 
-    <div class="mdl-layout-spacer"></div>
-
-    <nav class="mdl-navigation mdl-layout--large-screen-only">
-      <a class="mdl-navigation__link" href="#/login" ng-if="!isConnected()">Login</a>
-
-      <ul style="list-style: none; display: inline-flex;" class="mdl-navigation__link line" ng-if="isConnected()">
-        <li>  Bienvenue {{user.email}}</li>
-        <li><a href="#/create">creer un film</a></li>
-        <li><button class="btn-default btn" ng-click="disconnect()">Logout</button></li>
-      </ul>
-      <!--<a class="mdl-navigation__link" href="#">SignUp</a>-->
-    </nav>
+    <button ng-if="isConnected()" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+      <li class="mdl-menu__item"><a href="#/create">Creer un film</a></li>
+      <li class="mdl-menu__item">Liste des films</li>
+      <li class="mdl-menu__item" ng-click="disconnect()">Se deconnecter</li>
+    </ul>
   </div>
 </header>
 
-<div class="mdl-layout__drawer">
-  <a href="/" class="mdl-layout-title"><i class="material-icons">tv</i>  CINETEK</a>
-  <nav class="mdl-navigation">
 
-    <a class="mdl-navigation__link" ng-if="!isConnected()" href="#/login">Login</a>
-
-    <ul style="list-style: none" class="mdl-navigation__link" ng-if="isConnected()">
-      <li>  Bienvenue {{user.email}}</li>
-      <li><a href="#/create">creer un film</a></li>
-      <li><button class="btn-default btn" ng-click="disconnect()">Logout</button></li>
-    </ul>
-
-    <!--<a class="mdl-navigation__link" href="#">SignUp</a>-->
-  </nav>
-</div>
+<!--<div ng-if="isConnected()"-->
+     <!--class="demo-drawer-->
+     <!--mdl-layout__drawer-->
+     <!--mdl-color&#45;&#45;blue-grey-900-->
+     <!--mdl-color-text&#45;&#45;blue-grey-50"-->
+<!--&gt;-->
+  <!--<header class="demo-drawer-header">-->
+    <!--<img src="assets/images/user.jpg" class="demo-avatar">-->
+    <!--<div  class="demo-avatar-dropdown">-->
+      <!--<span ng-if="isConnected()">Bienvenue {{user.email}}</span>-->
+      <!--<div class="mdl-layout-spacer"></div>-->
+    <!--</div>-->
+  <!--</header>-->
+  <!--<nav class="demo-navigation mdl-navigation mdl-color&#45;&#45;blue-grey-800">-->
+    <!--<a class="mdl-navigation__link"-->
+       <!--href="#"-->
+    <!--&gt;-->
+      <!--<i class="mdl-color-text&#45;&#45;blue-grey-400 material-icons"-->
+         <!--role="presentation"-->
+      <!--&gt;home-->
+      <!--</i>-->
+      <!--Liste des films-->
+    <!--</a>-->
+    <!--<a class="mdl-navigation__link"-->
+       <!--href="#/create">-->
+      <!--<i class="mdl-color-text&#45;&#45;blue-grey-400 material-icons"-->
+         <!--role="presentation">inbox-->
+      <!--</i>Creer un film-->
+    <!--</a>-->
+    <!--<a ng-click="disconnect()"-->
+       <!--class="mdl-navigation__link"-->
+       <!--href="">-->
+      <!--<i class="mdl-color-text&#45;&#45;blue-grey-400 material-icons"-->
+         <!--role="presentation">delete-->
+      <!--</i>Se deconnecter-->
+    <!--</a>-->
+  <!--</nav>-->
+<!--</div>-->

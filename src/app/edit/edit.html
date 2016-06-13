@@ -1,0 +1,53 @@
+<div class="mdl-grid demo-content">
+
+  <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <!--ICI IL Y AVAIT LES ROND POURCENTAGE-->
+    <h1>{{movie.title}}</h1>
+
+  </div>
+  <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+    <!--ICI IL Y AVAIT LES GRAPHIQUES-->
+  </div>
+
+  <!--AFFICHE DU FILM-->
+  <div
+    class="demo-cards
+            mdl-cell
+            mdl-cell--4-col
+            mdl-cell--8-col-tablet
+            mdl-grid
+            mdl-grid--no-spacing"
+  >
+    <div style="background-image: url('{{movie.poster}}');"
+         class="demo-updates
+                 mdl-card mdl-shadow--2dp
+                 mdl-cell mdl-cell--4-col
+                 mdl-cell--4-col-tablet
+                 mdl-cell--12-col-desktop">
+    </div>
+
+    <div class="demo-separator mdl-cell--1-col"></div>
+
+    <!--LISTE DES ACTEURS-->
+    <div class="demo-options
+            mdl-card
+            mdl-color--deep-purple-500
+            mdl-shadow--2dp mdl-cell
+            mdl-cell--4-col
+            mdl-cell--3-col-tablet
+            mdl-cell--12-col-desktop"
+    >
+      <div
+        class="mdl-card__supporting-text
+                mdl-color-text--blue-grey-50"
+      >
+        <h3>Acteurs</h3>
+        <ul>
+          <li ng-repeat="actor in movie.actors">
+            {{actor.firstname}} {{actor.lastname}}{{$last ? '' : ', '}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

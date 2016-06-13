@@ -1,1 +1,57 @@
-<create></create>
+<div class="mdl-grid demo-content">
+  <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <h1>Création d'un film</h1>
+    <div  class="mdl-layout-spacer"></div>
+    <button type="button"
+            ng-click="redirect('/list')"
+            class="btn btn-default">Retour à la liste
+    </button>
+  </div>
+
+  <div class="row mdl-cell mdl-cell--12-col mdl-grid">
+    <form style="padding: 5%;" novalidate name="createForm" ng-submit="addMovie()" class="col s12 mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+      <div class="row">
+        <div class="input-field col s6" >
+          <input id="titre" type="text" class="validate">
+          <label ng-model="movie.title" required for="titre">Titre</label>
+        </div>
+        <div class="input-field col s6" >
+          <input id="Réalisateur" type="text" class="validate">
+          <label ng-model="movie.director" required for="Réalisateur">Réalisateur</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="date" type="text" class="validate">
+          <label ng-model="film.Year" required for="date">Année de sortie</label>
+        </div>
+        <div class="input-field col s8" >
+          <input id="poster" type="text" class="validate">
+          <label ng-model="movie.poster" required for="poster">Url de l'affiche du film</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4" >
+          <input id="actor.firstname" type="text" class="validate">
+          <label ng-model="actor.firstname" required for="actor.firstname">Prenom de l acteur</label>
+        </div>
+        <div class="input-field col s4" >
+          <input id="actor.lastname" type="text" class="validate">
+          <label ng-model="actor.lastname" required for="actor.lastname">Nom de l'acteur</label>
+        </div>
+
+        <button type="button" class="btn btn-success col s2" ng-click="addingActor()">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class='col s12'>
+        <button type="submit"
+                class="btn btn-lg btn-warning"
+        >
+          Créer le film
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
