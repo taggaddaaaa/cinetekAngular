@@ -23,7 +23,7 @@
           <td class="mdl-data-table__cell--non-numeric">{{movie.title}}</td>
           <td class="mdl-data-table__cell--non-numeric">{{movie.director}}</td>
           <td class="mdl-data-table__cell--non-numeric">{{movie.rate.id}}</td>
-          <td><button type="button" ng-click="redirect('/details/' + movie.title)" class="btn btn-primary">Voir +</button></td>
+          <td><button type="button" ng-click="redirect('/details/' + movie.$id)" class="btn btn-primary">Voir +</button></td>
           <td><button type="button" class="glyphicon glyphicon-pencil btn btn-success" ng-click="redirect('/edit/' + movie.title)"></button></td>
           <td><button type="button" class="glyphicon glyphicon-trash btn btn-danger" ng-click="delete(movie)"></button></td>
         </tr>
