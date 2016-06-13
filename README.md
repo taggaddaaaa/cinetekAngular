@@ -35,6 +35,9 @@ Made with love and some other stuff like:  <br />
 <img src="src/assets/images/gulp.png">
 <img src="src/assets/images/node-sass.png">
 <img src="src/assets/images/browsersync.png">
+<img src="src/assets/images/jasmine.png">
+<img src="src/assets/images/karma.png">
+<img src="http://materializecss.com/images/favicon/apple-touch-icon-152x152.png">
 
 
 ## Work in progress
