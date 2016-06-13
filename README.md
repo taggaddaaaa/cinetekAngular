@@ -28,7 +28,7 @@ to start the server.
 By default the page will be served on <a href="http://localhost:3000">http://localhost:3000</a>.
 
 ## Config
-Made with love and some other stuff like:
+Made with love and some other stuff like:  <br />
 <img src="src/assets/images/angular.png">
 <img src="src/assets/images/gulp.png">
 <img src="src/assets/images/node-sass.png">
