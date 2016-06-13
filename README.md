@@ -2,6 +2,8 @@
 
 >  An Angular application for viewing all the movies in my cintetek. 
 
+<img src="src/assets/images/capture.png">
+
 ## How it works
 Try it with this email and password:
 test@test.fr
