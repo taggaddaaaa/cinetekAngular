@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('cinetekAngular')
-  .factory('authService', function (FIREBASE_URL, $firebaseAuth) {
+  .factory('authService', function ($firebaseAuth, FIREBASE_URL ) {
+
     var ref = new Firebase(FIREBASE_URL);
     return $firebaseAuth(ref);
   });
