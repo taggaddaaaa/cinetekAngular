@@ -1,8 +1,7 @@
 (function () {
   'use strict';
 
-  angular
-    .module('cinetekAngular')
+  angular.module('cinetekAngular')
     .directive('topMenu', topMenu);
   function topMenu($location) {
       return {

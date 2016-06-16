@@ -2,6 +2,11 @@
 
   <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
     <h1>{{movie.title}}</h1>
+    <div  class="mdl-layout-spacer"></div>
+    <button type="button"
+            ng-click="redirect('/')"
+            class="btn btn-default">Retour à la liste
+    </button>
   </div>
 
   <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">{{movie.synopsis}}</div>
