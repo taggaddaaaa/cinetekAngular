@@ -4,7 +4,7 @@
   angular
     .module('cinetekAngular')
     .directive('topMenu', topMenu);
-  function topMenu() {
+  function topMenu($location) {
       return {
         templateUrl: 'app/directives/top-menu/top-menu.html',
         restrict: 'E',
@@ -18,6 +18,10 @@
 
           $scope.isConnected = function () {
             return user.isConnected();
+          };
+
+          $scope.redirect = function (path) {
+            $location.path(path);
           };
 
           $scope.disconnect = function () {

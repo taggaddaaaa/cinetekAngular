@@ -34,8 +34,6 @@ angular.module('cinetekAngular')
     $scope.redirect = function (path) {
       $location.path(path);
     };
-
-
-    console.log('movie', movie);
+    
   });
 
