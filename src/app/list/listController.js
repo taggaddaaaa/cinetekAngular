@@ -2,6 +2,9 @@
 
 angular.module('cinetekAngular')
   .controller('ListController', function ($location, $scope, Movies) {
+
+    $('.carousel').carousel();
+
     $scope.movies = Movies.getMovies();
     $scope.movieSuccess = false;
     $scope.movieError = false;
@@ -21,12 +24,12 @@ angular.module('cinetekAngular')
           $scope.movieError = true;
         });
     };
+
     ////////////////////////////////////////
     // ========= Function redirect =========
     ////////////////////////////////////////
     $scope.redirect = function (path) {
       $location.path(path);
     }
-
 
   });

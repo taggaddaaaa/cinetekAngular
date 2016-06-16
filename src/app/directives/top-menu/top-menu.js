@@ -14,14 +14,12 @@
             $location.search('search', newValue);
           });
           
-
           $scope.$watch('searchText', function(newValue, oldValue){
             if(newValue != oldValue && newValue != "") {
               $location.search('searchText', newValue);
             }
           });
-
-
+          
           $scope.filterByTiltle = "";
 
           $scope.$watch(function () {

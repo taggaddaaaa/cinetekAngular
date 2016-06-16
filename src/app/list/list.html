@@ -6,51 +6,21 @@
       <button type="button" ng-click="redirect('/create')" class="btn btn-primary">Créer</button>
     </div>
 
-    <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
-      <table  class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-        <thead >
-        <tr>
-          <th class="mdl-data-table__cell--non-numeric">Titre</th>
-          <th>Réalisateur</th>
-          <th><i class="material-icons">star_rate</i></th>
-          <th></th>
-          <th></th>
-          <th></th>
 
-
-        </tr>
-        </thead>
-        <tbody ng-repeat="movie in movies | filter:{title:filterByTitle}" >
-        <tr >
-          <td class="mdl-data-table__cell--non-numeric">{{movie.title}}</td>
-          <td class="mdl-data-table__cell--non-numeric">{{movie.director}}</td>
-          <td class="mdl-data-table__cell--non-numeric">{{movie.rate.id}}</td>
-
-          <td><a ng-click="redirect('/details/' + movie.$id)" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">remove_red_eye</i></a></td>
-          <td><a ng-click="redirect('/edit/' + movie.$id)" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">border_color</i></a></td>
-          <td><a ng-click="delete(movie)" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a></td>
-        </tr>
-        </tbody>
-      </table>
-
-    </div>
-</div>
-
-
-  <div class="section scrollspy " id="work">
-    <div class="container carousel">
+  <div class="section scrollspy"  id="work">
+    <div class="container">
       <div class="row">
 
-        <div ng-repeat="movie in movies | filter:{title:filterByTitle}" class="col s12 m4 l4 carroussel-item">
-          <div class="card gallery-cell">
+        <div ng-repeat="movie in movies | filter:{title:filterByTitle}" class="col s12 m4 l4 carousel">
+          <div class="card gallery-cell carousel-item">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="{{movie.poster}}">
+              <img class="activator carousel-item" src="{{movie.poster}}">
             </div>
-            <div class="card-content">
+            <div class="card-content ">
               <span class="card-title activator grey-text text-darken-4">{{movie.title}} <i class="mdi-navigation-more-vert right"></i></span>
               <p><a href="#">{{movie.rate.id}}</a></p>
             </div>
-            <div class="card-reveal">
+            <div class="card-reveal ">
               <span class="card-title grey-text text-darken-4">{{movie.title}} <i class="mdi-navigation-close right"></i></span>
               <p>{{movie.synopsis}}</p>
             </div>
@@ -60,3 +30,35 @@
       </div>
     </div>
   </div>
+
+
+
+  <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
+    <table  class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+      <thead >
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Titre</th>
+          <th>Réalisateur</th>
+          <th><i class="material-icons">star_rate</i></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="movie in movies | filter:{title:filterByTitle}" >
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">{{movie.title}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{movie.director}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{movie.rate.id}}</td>
+          <td><a ng-click="redirect('/details/' + movie.$id)" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">remove_red_eye</i></a></td>
+          <td><a ng-click="redirect('/edit/' + movie.$id)" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">border_color</i></a></td>
+          <td><a ng-click="delete(movie)" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+
