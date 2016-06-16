@@ -6,7 +6,7 @@ angular.module('cinetekAngular')
     function getMovies() {
       return list;
     }
-    
+
 
     // =====================================
     // ====== Function deleteMovie =========
@@ -27,10 +27,11 @@ angular.module('cinetekAngular')
         {
           title: movie.title,
           director: movie.director,
-          actors: movie.actors,
+          //actors: movie.actors,
           poster: movie.poster,
-          rate: movie.rate,
-          synopsis: movie.synopsis
+          //rate: movie.rate,
+          synopsis: movie.synopsis,
+          year: movie.year
         }
         )
         .then(function (movie) {

@@ -12,37 +12,43 @@
     <form style="padding: 5%;" novalidate name="createForm" ng-submit="addMovie()" class="col s12 mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
       <div class="row">
         <div class="input-field col s6" >
-          <input id="titre" type="text" class="validate">
-          <label ng-model="movie.title" required for="titre">Titre</label>
+          <input ng-model="movie.title" id="titre" type="text" class="validate">
+          <label  required for="titre">Titre</label>
         </div>
         <div class="input-field col s6" >
-          <input id="Réalisateur" type="text" class="validate">
-          <label ng-model="movie.director" required for="Réalisateur">Réalisateur</label>
+          <input ng-model="movie.director" id="Réalisateur" type="text" class="validate">
+          <label  required for="Réalisateur">Réalisateur</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4">
-          <input id="date" type="text" class="validate">
-          <label ng-model="film.Year" required for="date">Année de sortie</label>
+          <input ng-model="movie.year" id="date" type="text" class="validate">
+          <label required for="date">Année de sortie</label>
         </div>
         <div class="input-field col s8" >
-          <input id="poster" type="text" class="validate">
-          <label ng-model="movie.poster" required for="poster">Url de l'affiche du film</label>
+          <input ng-model="movie.poster" id="poster" type="text" class="validate">
+          <label required for="poster">Url de l'affiche du film</label>
         </div>
       </div>
-      <div class="row">
-        <div class="input-field col s4" >
-          <input id="actor.firstname" type="text" class="validate">
-          <label ng-model="actor.firstname" required for="actor.firstname">Prenom de l acteur</label>
-        </div>
-        <div class="input-field col s4" >
-          <input id="actor.lastname" type="text" class="validate">
-          <label ng-model="actor.lastname" required for="actor.lastname">Nom de l'acteur</label>
+      <!--<div class="row">
+        <div ng-repeat="actor in movie.actors">
+          <div class="input-field col s6" >
+            <input ng-model="actor.firstname" id="actor.firstname" type="text" class="validate">
+            <label required for="actor.firstname">Prenom de l acteur</label>
+          </div>
+          <div class="input-field col s6" >
+            <input ng-model="actor.lastname" id="actor.lastname" type="text" class="validate">
+            <label required for="actor.lastname">Nom de l'acteur</label>
+          </div>
         </div>
 
         <button type="button" class="btn btn-success col s2" ng-click="addingActor()">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
+      </div>-->
+      <div class="input-field col s12">
+        <textarea ng-model="movie.synopsis" id="movie.synopsis" class="materialize-textarea"></textarea>
+        <label for="movie.synopsis">Synopsis</label>
       </div>
 
       <div class='col s12'>

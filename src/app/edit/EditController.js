@@ -1,7 +1,12 @@
 'use strict';
+
 angular.module('cinetekAngular')
-  .controller('EditController', function ($scope, $routeParams, Movies) {
-    $scope.movie = Movies.getMovieById();
+  .controller('EditController', function ($scope, $routeParams, $location, Movies) {
+    $scope.movie = Movies.getMovie($routeParams.id);
+    Movies.getMovie($routeParams.id).then(function (aMovie) {
+      $scope.movie = aMovie;
+    });
+
     $scope.movieSuccess = false;
     $scope.movieError = false;
 
@@ -30,7 +35,7 @@ angular.module('cinetekAngular')
       $location.path(path);
     };
 
-    
+
     console.log('movie', movie);
   });
 
