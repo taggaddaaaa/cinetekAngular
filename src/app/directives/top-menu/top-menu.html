@@ -4,11 +4,8 @@
     <!-- Titre -->
     <a style="color:white" ng-click="redirect('#/list')" class="mdl-layout-title"><i class="material-icons">tv</i>  CINETEK</a>
 
-    <!-- Add spacer, to align navigation to the right -->
     <div  class="mdl-layout-spacer"></div>
-
     <span ng-if="isConnected()">Bienvenue {{user.email}}</span>
-
     <div  class="mdl-layout-spacer"></div>
 
     <!-- Barre de recherche -->
@@ -27,48 +24,8 @@
     </button>
     <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
       <li class="mdl-menu__item"><a href="#/create">Creer un film</a></li>
-      <li class="mdl-menu__item">Liste des films</li>
+      <li class="mdl-menu__item"><a href="#/list">Liste des films</a></li>
       <li class="mdl-menu__item" ng-click="disconnect()">Se deconnecter</li>
     </ul>
   </div>
 </header>
-
-
-<!--<div ng-if="isConnected()"-->
-     <!--class="demo-drawer-->
-     <!--mdl-layout__drawer-->
-     <!--mdl-color&#45;&#45;blue-grey-900-->
-     <!--mdl-color-text&#45;&#45;blue-grey-50"-->
-<!--&gt;-->
-  <!--<header class="demo-drawer-header">-->
-    <!--<img src="assets/images/user.jpg" class="demo-avatar">-->
-    <!--<div  class="demo-avatar-dropdown">-->
-      <!--<span ng-if="isConnected()">Bienvenue {{user.email}}</span>-->
-      <!--<div class="mdl-layout-spacer"></div>-->
-    <!--</div>-->
-  <!--</header>-->
-  <!--<nav class="demo-navigation mdl-navigation mdl-color&#45;&#45;blue-grey-800">-->
-    <!--<a class="mdl-navigation__link"-->
-       <!--href="#"-->
-    <!--&gt;-->
-      <!--<i class="mdl-color-text&#45;&#45;blue-grey-400 material-icons"-->
-         <!--role="presentation"-->
-      <!--&gt;home-->
-      <!--</i>-->
-      <!--Liste des films-->
-    <!--</a>-->
-    <!--<a class="mdl-navigation__link"-->
-       <!--href="#/create">-->
-      <!--<i class="mdl-color-text&#45;&#45;blue-grey-400 material-icons"-->
-         <!--role="presentation">inbox-->
-      <!--</i>Creer un film-->
-    <!--</a>-->
-    <!--<a ng-click="disconnect()"-->
-       <!--class="mdl-navigation__link"-->
-       <!--href="">-->
-      <!--<i class="mdl-color-text&#45;&#45;blue-grey-400 material-icons"-->
-         <!--role="presentation">delete-->
-      <!--</i>Se deconnecter-->
-    <!--</a>-->
-  <!--</nav>-->
-<!--</div>-->
