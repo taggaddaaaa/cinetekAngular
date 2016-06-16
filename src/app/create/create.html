@@ -9,55 +9,58 @@
   </div>
 
   <div class="demo-charts row mdl-cell mdl-cell--12-col mdl-grid">
-    <form style="padding: 5%;" novalidate name="createForm" ng-submit="addMovie()" class="col s12 mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <form style="padding: 5%;" novalidate name="createForm" ng-submit="addMovie()" class="formValidate col s12 mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
       <div class="row">
         <div class="input-field col s6" >
-          <input ng-model="movie.title" id="titre" type="text" class="validate">
-          <label  required for="titre">Titre</label>
+          <input  ng-model="movie.title" id="titre" type="text" data-error=".errorTitle">
+          <div class="errorTitle"></div>
+          <label for="titre">Titre</label>
         </div>
         <div class="input-field col s6" >
-          <input ng-model="movie.director" id="Réalisateur" type="text" class="validate">
-          <label  required for="Réalisateur">Réalisateur</label>
+          <input data-error="errorDirector" ng-model="movie.director" id="Réalisateur" type="text">
+          <div class="errorDirector"></div>
+          <label for="Réalisateur">Réalisateur</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4">
-          <input ng-model="movie.year" id="date" type="text" class="validate">
-          <label required for="date">Année de sortie</label>
+          <input data-error=".errorDate" ng-model="movie.year" id="date" type="text">
+          <div class="errorDate"></div>
+          <label for="date">Année de sortie</label>
         </div>
         <div class="input-field col s8" >
-          <input ng-model="movie.poster" id="poster" type="text" class="validate">
-          <label required for="poster">Url de l'affiche du film</label>
+          <input ng-model="movie.poster" id="poster" type="text" data-error=".errorPoster">
+          <div class="errorPoster"></div>
+          <label for="poster">Url de l'affiche du film</label>
         </div>
       </div>
-      <!--<div class="row">
-        <div ng-repeat="actor in movie.actors">
-          <div class="input-field col s6" >
-            <input ng-model="actor.firstname" id="actor.firstname" type="text" class="validate">
-            <label required for="actor.firstname">Prenom de l acteur</label>
-          </div>
-          <div class="input-field col s6" >
-            <input ng-model="actor.lastname" id="actor.lastname" type="text" class="validate">
-            <label required for="actor.lastname">Nom de l'acteur</label>
-          </div>
-        </div>
 
-        <button type="button" class="btn btn-success col s2" ng-click="addingActor()">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </button>
-      </div>-->
       <div class="input-field col s12">
-        <textarea ng-model="movie.synopsis" id="movie.synopsis" class="materialize-textarea"></textarea>
+        <textarea  data-error=".errorTextarea" ng-model="movie.synopsis" id="movie.synopsis" class="materialize-textarea"></textarea>
+        <div class="errorTextarea"></div>
         <label for="movie.synopsis">Synopsis</label>
       </div>
 
-      <div class='col s12'>
+      <div class='input-field col s12'>
         <button type="submit"
-                class="btn btn-lg btn-warning"
+                class="btn btn-lg btn-warning waves-effect waves-light btn modal-trigger submit"
+                name="action"
         >
           Créer le film
         </button>
       </div>
     </form>
+  </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>GREAAAAT!!!</h4>
+    <p>Votre film a bien été enregistré!</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#/" class=" modal-action modal-close waves-effect waves-green btn-flat">Retour à la liste</a>
   </div>
 </div>

@@ -34,32 +34,29 @@
       </table>
 
     </div>
-  </div>
+</div>
 
 
+  <div class="section scrollspy " id="work">
+    <div class="container carousel">
+      <div class="row">
 
-
-<div class="section scrollspy" id="work">
-  <div class="container">
-    <!--<h2 class="header text_b">Liste de mes Films </h2>-->
-    <div class="row">
-
-      <div ng-repeat="movie in movies | filter:{title:filterByTitle}" class="col s12 m4 l4">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="{{movie.poster}}">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">{{movie.title}} <i class="mdi-navigation-more-vert right"></i></span>
-            <p><a href="#">{{movie.rate.id}}</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">{{movie.title}} <i class="mdi-navigation-close right"></i></span>
-            <p>{{movie.synopsis}}</p>
+        <div ng-repeat="movie in movies | filter:{title:filterByTitle}" class="col s12 m4 l4 carroussel-item">
+          <div class="card gallery-cell">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="{{movie.poster}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{movie.title}} <i class="mdi-navigation-more-vert right"></i></span>
+              <p><a href="#">{{movie.rate.id}}</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{movie.title}} <i class="mdi-navigation-close right"></i></span>
+              <p>{{movie.synopsis}}</p>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-</div>

@@ -5,6 +5,7 @@ angular.module('cinetekAngular')
     $scope.movies = Movies.getMovies();
     $scope.movieSuccess = false;
     $scope.movieError = false;
+    $scope.filterByTiltle = $location.search().search;
 
     //////////////////////////////////////
     // ========= Function remove =========
@@ -27,5 +28,5 @@ angular.module('cinetekAngular')
       $location.path(path);
     }
 
-    
+
   });
