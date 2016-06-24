@@ -46,3 +46,6 @@ The project is in its early stages of development. Some things might not work as
 ## Known issues
 * Social auth doesn't work yet
 * have some trouble with my hamburger navbar
+
+## IN PROGRESS...
+1[movie](http://i.giphy.com/QMj9DxRtXAhxe.gif)
